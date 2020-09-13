@@ -15,7 +15,7 @@ spec:
   restartPolicy: OnFailure
   containers:
     - name: warden
-      image: theithollow/warden:v1
+      image: pythonrocks/warden:v1
       imagePullPolicy: Always
 ---
 apiVersion: v1

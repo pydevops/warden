@@ -1,0 +1,15 @@
+kind: Cluster
+apiVersion: kind.sigs.k8s.io/v1alpha3
+kubeadmConfigPatches:
+  - |
+    apiVersion: kubeadm.k8s.io/v1beta2
+    kind: ClusterConfiguration
+    metadata: config
+    apiServer:
+      extraArgs:
+        enable-admission-plugins: AlwaysPullImages,ValidatingAdmissionWebhook
+  
+nodes:
+- role: control-plane
+- role:  worker
+- role:  worker
